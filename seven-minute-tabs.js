@@ -3,13 +3,15 @@
 * https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document
 * Heavily modified to web component by Zach Leatherman
 */
-class SevenMinuteTabs extends HTMLElement {
+export default class SevenMinuteTabs extends HTMLElement {
   constructor() {
     super();
     
     this._init = this._init.bind(this);
     this._observer = new MutationObserver(this._init);
   }
+
+  static element = "seven-minute-tabs";
 
   get keys() {
     return {
@@ -296,4 +298,4 @@ class SevenMinuteTabs extends HTMLElement {
   }
 }
 
-window.customElements.define("seven-minute-tabs", SevenMinuteTabs);
+// window.customElements.define("seven-minute-tabs", SevenMinuteTabs);
