@@ -13,6 +13,10 @@ export default class SevenMinuteTabs extends HTMLElement {
 
   static element = "seven-minute-tabs";
 
+  static register() {
+    customElements.define(SevenMinuteTabs.element, SevenMinuteTabs);
+  }
+
   get keys() {
     return {
       end: 35,
